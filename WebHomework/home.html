@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <div class="body1">
+        <div class="header">
+            <div class="nav">
+
+                <a href="home.html">
+                    <p>HOME</p>
+                </a>
+                <a href="about1.html">
+                    <p>ABOUT</p>
+                </a>
+
+                <a href="album.html">
+                    <p>ALBUM</p>
+                </a>
+                <a href="message.html">
+                    <p>VIDEO</p>
+                </a>
+
+            </div>
+            <div class="logo">
+                <h1>PCY</h1>
+                <p>|MY PROJRCT</p>
+            </div>
+        </div>
+        <div class="article">
+
+            PICK UP YOUR HEAD AND FIGHT FOR ME
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_article">
+            <div class="about">
+                <img src="./img/home/about.jpg" alt="">
+                <h1>HOME </h1>
+                <h2>风曳</h2>
+                <p>The world may be full of ugliness, greed, ignorance, and selfishness, but please be convinced that no matter how lonely you are, there will always be an angel behind you!</p>
+            </div>
+            <div class="blogger">
+                <img src="./img/home/Blogger.jpg" alt="">
+                <h1>ABOUT</h1>
+                <h2>风铃</h2>
+                <p>Fate is like a long river, and all of us are fish in the water. Maybe a powerful person can easily change the fate of a fish, or even a swarm of fish, but you remember that no one can change the flow of the river.</p>
+            </div>
+            <div class="album">
+                <img src="./img/home/album.jpg" alt="">
+                <h1>ALBUM</h1>
+                <h2>风铃</h2>
+                <p>I have sworn an oath to guard your knight in the Hall of Five Swords, please do not order a knight to break his oath. A ghost and a knife, protect you completely.</p>
+            </div>
+            <div class="message">
+                <img src="./img/home/message.jpg" alt="">
+                <h1>MESSAGE</h1>
+                <h2>风铃</h2>
+                <p>And so on day after day, year after year. A new world has been constructed. The once vague scene slowly became clear, and the characters that were once in the mind slowly had a soul. In that world, there are beautiful xenomorphs, good
+                    intrigues, big or small.</p>
+            </div>
+        </div>
+        <footer>
+            <p>
+                2022/10/10|BY.pcy
+                <br> 前端作业
+                <br> PICK UP YOUR HEAD AND FIGHT FOR ME
+            </p>
+        </footer>
+    </div>
+    <script>
+        var home = document.querySelector('.about')
+        var about = document.querySelector('.blogger')
+        var album = document.querySelector('.album')
+        var message = document.querySelector('.message')
+        home.addEventListener('click', () => {
+            location.href = "home.html"
+        })
+        about.addEventListener('click', () => {
+            location.href = "about1.html"
+        })
+        album.addEventListener('click', () => {
+            location.href = "album.html"
+        })
+        message.addEventListener('click', () => {
+            location.href = "message.html"
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+    * {
+        list-style: none;
+        bottom: 0;
+        text-decoration: none;
+    }
+    
+    .shell {
+        display: flex;
+        width: 800px;
+        height: 450px;
+        position: relative;
+        margin: 5% auto;
+        overflow: hidden;
+        border-radius: 30px;
+        /* border: 1px #fff solid; */
+        box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .images {
+        width: 300%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        left: 0;
+    }
+    
+    .img {
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .img img {
+        object-fit: contain;
+        width: 800px;
+    }
+    
+    .min_image {
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        height: 30px;
+        /* border: 5px solid red; */
+        width: 30%;
+        right: 10px;
+        z-index: 999;
+    }
+    
+    .min {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-size: cover;
+        border: solid rgba(255, 255, 255, 0.5) 3px;
+        background-position: -20px 0;
+    }
+    
+    .min:nth-child(1) {
+        background-image: url("/img/album/album1.jpg");
+    }
+    
+    .min:nth-child(2) {
+        background-image: url("/img/album/album2.jpg");
+    }
+    
+    .min:nth-child(3) {
+        background-image: url("/img/album/album3.jpg");
+    }
+    
+    .min:nth-child(4) {
+        background-image: url("/img/album/album4.jpg");
+    }
+    
+    .min:nth-child(5) {
+        background-image: url("/img/album/album5.jpg");
+    }
+    
+    .min:nth-child(6) {
+        background-image: url("/img/album/album6.jpg");
+    }
+    
+    .min:nth-child(7) {
+        background-image: url("/img/album/album7.jpg");
+    }
+    
+    .button-left {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        color: black;
+        cursor: pointer;
+        text-align: center;
+        /* background-color: black; */
+        border-radius: 5px;
+    }
+    
+    .button-right {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        right: 0;
+        cursor: pointer;
+        text-align: center;
+        /* background-color: black; */
+        color: black;
+        border-radius: 5px;
+    }
+    
+    .button-left:hover,
+    .button-right:hover {
+        background-color: rgba(6, 14, 17, .5);
+    }
+    
+    footer {
+        position: absolute;
+        height: 50px;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(25, 45, 62, .6);
+    }

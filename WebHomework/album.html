@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>album</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/album.css">
+</head>
+
+<body>
+    <div class="body1">
+        <div class="header">
+            <div class="nav">
+
+                <a href="home.html">
+                    <p>HOME</p>
+                </a>
+                <a href="about1.html">
+                    <p>ABOUT</p>
+                </a>
+
+                <a href="album.html">
+                    <p>ALBUM</p>
+                </a>
+                <a href="message.html">
+                    <p>VIDEO</p>
+                </a>
+
+            </div>
+            <div class="logo">
+                <h1>PCY</h1>
+                <p>|MY PROJRCT</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="shell">
+        <ui class="images">
+            <li class="img">
+                <img src="./img/album/album1.jpg">
+            </li>
+            <li class="img">
+                <img src="./img/album/album2.jpg">
+            </li>
+            <li class="img">
+                <img src="./img/album/album3.jpg">
+            </li>
+            <li class="img">
+                <img src="./img/album/album4.jpg">
+            </li>
+            <li class="img">
+                <img src="./img/album/album5.jpg">
+            </li>
+            <li class="img">
+                <img src="./img/album/album6.jpg">
+            </li>
+            <li class="img">
+                <img src="./img/album/album7.jpg">
+            </li>
+
+
+        </ui>
+        <ui class="min_image">
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+
+
+        </ui>
+        <!-- <div class="button"> -->
+        <div class="button-left">
+            <p>
+                <</p>
+        </div>
+        <div class="button-right">
+            <p>&gt;</p>
+        </div>
+
+        <!-- </div> -->
+
+    </div>
+
+    <footer>
+        <p>
+            2022/10/10|BY.pcy
+
+            <br> PICK UP YOUR HEAD AND FIGHT FOR ME
+        </p>
+    </footer>
+    <script>
+        var left = document.querySelector('.button-left')
+        var right = document.querySelector('.button-right')
+        let min = document.querySelectorAll(".min")
+        let images = document.querySelector(".images")
+        let index = 0
+        let time
+
+        function position() {
+            images.style.left = (index * -100) + "%"
+        }
+
+        function add() {
+            if (index >= min.length - 1) {
+                index = 0
+            } else {
+                index++
+            }
+        }
+
+        function desc() {
+            if (index < 1) {
+                index = min.length - 1
+            } else {
+                index--
+            }
+        }
+
+        function timer() {
+            time = setInterval(() => {
+                index++
+                desc()
+                add()
+                position()
+            }, 3000)
+        }
+        left.addEventListener("click", () => {
+            desc()
+            position()
+            clearInterval(time)
+            timer()
+        })
+        right.addEventListener("click", () => {
+            add()
+            position()
+            clearInterval(time)
+            timer()
+        })
+        for (let i = 0; i < min.length; i++) {
+            min[i].addEventListener("click", () => {
+                index = i
+                position()
+                clearInterval(time)
+                timer()
+            })
+        }
+        timer()
+    </script>
+
+</body>
+
+</html>
